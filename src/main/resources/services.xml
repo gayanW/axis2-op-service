@@ -1,0 +1,25 @@
+<service scope="application">
+    <description>Axis2 Order Processing Service</description>
+    <parameter name="ServiceClass">com.wso2.gayanw.axis2.OrderProcessingService</parameter>
+    <operation name="createOrder">
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+    </operation>
+    <operation name="createProduct">
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+    </operation>
+    <operation name="getOrderById">
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </operation>
+    <operation name="getProductById">
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </operation>
+    <operation name="addProductToOrder">
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </operation>
+    <operation name="getLastOrderId">
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </operation>
+    <operation name="getLastProductId">
+        <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </operation>
+</service>
